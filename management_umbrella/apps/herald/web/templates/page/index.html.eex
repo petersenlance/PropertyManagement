@@ -1,0 +1,19 @@
+<div class="hero-section">
+  <div class="hero-section-text">
+    <h1>Welcome to Herald</h1>
+  </div>
+  <div>
+    <p>Select which tenants you would like to send a message to, type our your message, and then click send.</p>
+    <%= form_for @conn, page_path(@conn, :send_message), [as: :send_message], fn f -> %>
+    <label>
+      Number: <%= text_input f, :numbers %>
+    </label>
+
+    <label>
+      Message: <%= text_input f, :message %>
+    </label>
+
+    <%= submit "Send" %>
+    <% end %>
+  </div>
+</div>
