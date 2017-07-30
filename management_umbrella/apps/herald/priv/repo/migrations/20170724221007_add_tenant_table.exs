@@ -7,6 +7,8 @@ defmodule Herald.Repo.Migrations.AddTenantTable do
       add :full_name, :string, null: false
       add :phone_number, :string, null: true
       add :address, :string, null: false
+      add :building, :integer, null: false
+      add :apartment, :integer, null: true
     end
   end
 end

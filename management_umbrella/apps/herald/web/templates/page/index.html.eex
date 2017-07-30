@@ -5,12 +5,50 @@
   <div>
     <p>Select which tenants you would like to send a message to, type our your message, and then click send.</p>
     <%= form_for @conn, page_path(@conn, :send_message), [as: :send_message], fn f -> %>
+    <h2>Select buildings to send message to:</h2>
     <label>
-      Number: <%= text_input f, :numbers %>
+      <%= checkbox f, :build_one %> 706
     </label>
-
+    <br/>
     <label>
-      Message: <%= text_input f, :message %>
+      <%= checkbox f, :build_two %> 710/712
+    </label>
+    <br/>
+    <label>
+      <%= checkbox f, :build_three %> 714/716
+    </label>
+    <br/>
+    <label>
+      <%= checkbox f, :build_four %> 718
+    </label>
+    <br/>
+    <label>
+      <%= checkbox f, :build_five %> 722
+    </label>
+    <br/>
+    <label>
+      <%= checkbox f, :build_six %> 726
+    </label>
+    <br/>
+    <label>
+      <%= checkbox f, :build_seven %> 730
+    </label>
+    <br/>
+    <label>
+      <%= checkbox f, :build_eight %> Linden Ave
+    </label>
+    <br/>
+    <label>
+      <%= checkbox f, :big_lot %> Big lot
+    </label>
+    <br/>
+    <label>
+      <%= checkbox f, :all %> All tenants
+    </label>
+    <br/>
+    <label>
+      <!-- Message: <%= text_input f, :message %> -->
+      Message: <%= textarea f, :message %>
     </label>
 
     <%= submit "Send" %>
